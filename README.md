@@ -82,7 +82,7 @@ cd client
 npm run dev
 ```
 
-Open http://localhost:5173
+Open https://text-summarizer-2zh3.onrender.com
 
 ---
 
