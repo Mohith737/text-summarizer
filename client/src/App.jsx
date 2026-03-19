@@ -1,6 +1,8 @@
 import { useRef, useState } from "react";
 import "./App.css";
 
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3001";
+
 function App() {
   const [text, setText] = useState("");
   const [result, setResult] = useState(null);
@@ -19,7 +21,7 @@ function App() {
     setResult(null);
 
     try {
-      const response = await fetch("http://localhost:3001/api/summarize", {
+      const response = await fetch(`${API_URL}/api/summarize`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
